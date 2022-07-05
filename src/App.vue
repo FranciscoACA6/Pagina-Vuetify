@@ -1,6 +1,6 @@
 <template>
 
-<MenuPrincipal></MenuPrincipal>
+<MenuPrincipal></MenuPrincipal >
 
 
   
@@ -10,6 +10,7 @@
 
 import MenuPrincipal from './components/MenuPrincipal.vue';
 
+
 export default {
   name: 'App',
 
@@ -17,7 +18,8 @@ export default {
    
   }),
   components: {
-    MenuPrincipal
+    MenuPrincipal,
+
 
   }
 };

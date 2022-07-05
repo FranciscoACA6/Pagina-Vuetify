@@ -1,5 +1,5 @@
 <template>
-<v-parallax height="600" dark src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg">
+<v-parallax height="700" dark src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg">
  <v-container >
   <div class="about" >
    
@@ -38,6 +38,42 @@
 
       </v-text-field>
 
+        <v-text-field
+      dark
+      v-model="Calle"
+      :rules="callerules"
+      label="Calle"
+      required>
+
+      </v-text-field>
+
+      <v-select
+      dark
+      v-model="País"
+      :rules="paísrules"
+      label="País"
+      required>
+
+      </v-select>
+
+      <v-select
+      dark
+      v-model="Estado"
+      :rules="estadorules"
+      label="Estado"
+      required>
+
+      </v-select>
+
+      <v-select
+      dark
+      v-model="Ciudad"
+      :rules="ciudadrules"
+      label="Ciudad"
+      required>
+
+      </v-select>
+
       <v-checkbox
       dark
       v-model="checkbox"
@@ -46,6 +82,8 @@
       required>
 
       </v-checkbox>
+
+      
 
       <v-btn
       :disabled="!valid"
@@ -62,8 +100,6 @@
         Resetear
       </v-btn>
     </v-form>
-
-
 
   </div>
   </v-container>
@@ -86,6 +122,22 @@ export default{
     codigoPostalRules:[
       v => !!v || 'Se requiere un código postal',
       v => (v && v.length <= 5) || 'Ingrese un código postal válido' 
+    ],
+    Calle:'',
+    callerules:[
+      v => !!v || 'Se requiere una Calle',
+    ],
+    Ciudad:'',
+    ciudadrules:[
+      v => !!v || 'Se requiere una Ciudad',
+    ],
+    Estado:'',
+    estadorules:[
+      v => !!v || 'Se requiere un estado',
+    ],
+    País:'',
+    paísrules:[
+      v => !!v || 'Se requiere un pais',
     ],
     checkbox:false,
 
